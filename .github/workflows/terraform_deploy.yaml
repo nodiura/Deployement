@@ -1,17 +1,13 @@
-# This is a basic workflow to help you get started with Actions
  
-name: CI
+name: Terraform 
  
-# Controls when the workflow will run
+
 on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
+  
   push:
-    branches: [ "main" ] # git push
+    branches: [ "main" ] 
   pull_request:
-    branches: [ "main" ] # git checkout -b new_branch
-                         # create pull request
-                         # from new_branch to main branch
- 
+    branches: [ "main" ] 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
  
@@ -44,6 +40,9 @@ jobs:
       
       - name: Run Terraform Apply
         run: terraform apply -auto-approve
+      
+      - name: Run Terraform Destroy
+        run: terraform destroy -auto-approve
  
       # 1 Install terraform - COMPLETE
       # 2 TERRAFORM LOGIN | copy a token and paste on our machine - COMPLETE
