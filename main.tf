@@ -4,7 +4,7 @@ terraform {
     organization = "027-spring-cld"
 
     workspaces {
-      name = "modules_workspace"
+      name = "027-first_worksace"
     }
   }
   required_providers {
@@ -23,7 +23,7 @@ module "my_vpc" {
     Name = "modules_vpc"
   }
 }
- 
+
 module "security_gr" {
   source  = "app.terraform.io/027-spring-cld/security_gr/aws"
   version = "1.0.0"

@@ -39,17 +39,11 @@ jobs:
       - name: Run Terraform Init
         run: terraform init
  
-      - name: Check Terraform Format
-        run: terraform fmt -check -recursive
- 
       - name: Run Terraform Plan
         run: terraform plan
       
       - name: Run Terraform Apply
         run: terraform apply -auto-approve
-      
-      - name: Run Terraform Destroy
-        run: terraform destroy -auto-approve
  
       # 1 Install terraform - COMPLETE
       # 2 TERRAFORM LOGIN | copy a token and paste on our machine - COMPLETE
