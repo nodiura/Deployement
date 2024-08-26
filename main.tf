@@ -14,8 +14,8 @@ terraform {
     }
   }
 }
-provider "aws" {}
-
+provider "aws" {
+}
 module "my_vpc" {
   source         = "./modules/vpc"
   vpc_cidr_block = "172.15.0.0/16"
