@@ -21,12 +21,12 @@ jobs:
         with:
           cli_config_credentials_token: ${{ secrets.TF_LOGIN_TOKEN }}
  
-      - name: Terraform Init
-        run: terraform init
+      - name: Run Terraform Init
+        run: Terraform init
  
-      - name: Terraform Plan for Destroy
+      - name: Run Terraform Plan for Destroy
         run: terraform plan -destroy
  
-      - name: Terraform Destroy
+      - name: Run Terraform Destroy
         run: terraform destroy -auto-approve
  
